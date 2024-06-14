@@ -1,0 +1,29 @@
+﻿﻿
+@model TpPizza.Models.CreatePizzaDto
+
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+<div class="form-group">
+    <label asp-for="Nom" class="control-label"></label>
+    <input asp-for="Nom" class="form-control" />
+    <span asp-validation-for="Nom" class="text-danger"></span>
+</div>
+<br />
+<div class="form-group">
+    <label asp-for="IdPate" class="control-label"></label>
+    <select asp-for="IdPate" class="form-control"
+            asp-items="Model.ChoixPate">
+        <option disabled>Please select one</option>
+    </select>
+    <span asp-validation-for="IdPate" class="text-danger"></span>
+</div>
+<br />
+<div class="form-group">
+    <label asp-for="IdsIngredients" class="control-label"></label>
+    <select multiple asp-for="IdsIngredients" class="form-control"
+            asp-items="Model.ChoixIngredients">
+        <option disabled>Please select your ingredients</option>
+    </select>
+    <span asp-validation-for="IdsIngredients" class="text-danger"></span>
+</div>
+<br />
